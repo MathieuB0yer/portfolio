@@ -4,7 +4,7 @@ import send from "../img/send.svg";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { comeFromLeft, comeFromLeftDelay } from "../animate";
-const Contactform = () => {
+const Contactform = ({ contactRef }) => {
   let controls = useAnimation();
   let [ref, inView] = useInView();
 
@@ -27,7 +27,7 @@ const Contactform = () => {
         <span className="skew">TOGETHER</span>
       </h1>
 
-      <form>
+      <form ref={contactRef}>
         <input placeholder="Enter you mail" type="email"></input>
 
         <button>

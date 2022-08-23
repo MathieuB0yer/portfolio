@@ -7,7 +7,7 @@ export default createGlobalStyle`
 
     margin: 0;
     padding: 0;
-
+    scroll-behavior: smooth ;
     
 }
 
@@ -15,6 +15,7 @@ export default createGlobalStyle`
 body{
     font-family: 'Source Serif Pro', serif;
 
+   
     overflow-x: hidden;
    
 }

@@ -19,7 +19,7 @@ import { comeFromBottom } from "../animate";
 import { useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
-const Mywork = () => {
+const Mywork = ({ workRef }) => {
   let sliderimg = [
     { img: project_1, position: 0 },
     { img: project_2, position: 1 },
@@ -46,6 +46,7 @@ const Mywork = () => {
   }, [inView, controls]);
   return (
     <MyWorkSection
+      ref={workRef}
       variants={comeFromBottom}
       initial="hidden"
       exit="exit"

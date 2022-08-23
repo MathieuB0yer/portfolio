@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   BorderButton,
   FullscreenIMG,
@@ -17,8 +17,9 @@ import {
   stagg,
   textAppear,
 } from "../animate";
+
 const heroIMG = require("../img/heroIMG.png");
-const Header = () => {
+const Header = ({ executeScrollOnWork, executeScrollOnContact }) => {
   return (
     <FullScreenSection>
       <FullscreenIMG variants={makebig} initial="hidden" animate="show">
@@ -36,10 +37,17 @@ const Header = () => {
             </motion.span>
           </motion.h1>
           <motion.div variants={btnAnim} className="btnContainer">
-            <PlainButton color="white" textcolor="#49539f" className="first">
+            <PlainButton
+              onClick={executeScrollOnWork}
+              color="white"
+              textcolor="#49539f"
+              className="first"
+            >
               View my work
             </PlainButton>
-            <BorderButton color="white">Get in touch</BorderButton>
+            <BorderButton onClick={executeScrollOnContact} color="white">
+              Get in touch
+            </BorderButton>
           </motion.div>
         </HeaderTitle>
       </HeaderTitleContainer>

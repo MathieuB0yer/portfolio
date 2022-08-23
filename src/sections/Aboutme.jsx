@@ -13,7 +13,7 @@ import {
 
 const aboutMe = require("../img/aboutme.png");
 
-const Aboutme = () => {
+const Aboutme = ({ myRef, executeScrollOnWork, executeScrollOnContact }) => {
   let controls = useAnimation();
   let [ref, inView] = useInView();
 
@@ -26,7 +26,7 @@ const Aboutme = () => {
   }, [inView, controls]);
   return (
     <Aboutmesection>
-      <FlexContainer>
+      <FlexContainer ref={myRef}>
         <FlexLeft ref={ref} variants={comeFromLeft} animate={controls}>
           <img src={aboutMe} alt="" />
         </FlexLeft>
@@ -52,9 +52,13 @@ const Aboutme = () => {
           </motion.p>
 
           <div className="btnContainer">
-            <PlainButton color="#6970A8">Yes i'm ready</PlainButton>
+            <PlainButton color="#6970A8" onClick={executeScrollOnContact}>
+              Yes i'm ready
+            </PlainButton>
 
-            <BorderButton color="#6970A8">I need more</BorderButton>
+            <BorderButton color="#6970A8" onClick={executeScrollOnWork}>
+              I need more
+            </BorderButton>
           </div>
         </FlexRight>
       </FlexContainer>
