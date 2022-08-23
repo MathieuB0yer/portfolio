@@ -13,7 +13,7 @@ import {
 
 const aboutMe = require("../img/aboutme.png");
 
-const Aboutme = ({ myRef, executeScrollOnWork, executeScrollOnContact }) => {
+const Aboutme = ({ executeScrollOnWork, executeScrollOnContact }) => {
   let controls = useAnimation();
   let [ref, inView] = useInView();
 
@@ -26,8 +26,8 @@ const Aboutme = ({ myRef, executeScrollOnWork, executeScrollOnContact }) => {
   }, [inView, controls]);
   return (
     <Aboutmesection>
-      <FlexContainer ref={myRef}>
-        <FlexLeft ref={ref} variants={comeFromLeft} animate={controls}>
+      <FlexContainer ref={[ref]}>
+        <FlexLeft variants={comeFromLeft} animate={controls}>
           <img src={aboutMe} alt="" />
         </FlexLeft>
 

@@ -10,6 +10,10 @@ export const FullScreenSection = styled(motion.div)`
 
   height: 100vh;
 
+  @media only screen and (max-width: 390px) {
+    height: -webkit-fill-available;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +29,12 @@ export const FullscreenIMG = styled(motion.div)`
 
     object-fit: cover;
     position: absolute;
+
     width: 100%;
+
+    @media only screen and (max-width: 890px) {
+      object-position: -15rem;
+    }
   }
 
   .gradient {
@@ -38,6 +47,10 @@ export const FullscreenIMG = styled(motion.div)`
     position: absolute;
     height: 100%;
     width: 100%;
+
+    @media only screen and (max-width: 890px) {
+      height: -webkit-fill-available;
+    }
   }
 `;
 
@@ -49,6 +62,12 @@ export const HeaderTitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: right;
+
+  @media only screen and (max-width: 390px) {
+    justify-content: center;
+
+    text-align: center;
+  }
 `;
 export const HeaderTitle = styled(motion.div)`
   display: flex;
@@ -56,6 +75,13 @@ export const HeaderTitle = styled(motion.div)`
   flex-direction: column;
 
   margin-right: 10%;
+
+  @media only screen and (max-width: 390px) {
+    justify-content: center;
+
+    margin-right: 0;
+    text-align: center;
+  }
   h1 {
     line-height: 140px;
 
@@ -75,6 +101,16 @@ export const HeaderTitle = styled(motion.div)`
     h1 {
       font-size: 90px;
       line-height: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    h1 {
+      line-height: 70px;
+
+      font-size: 80px;
+
+      color: white;
     }
   }
 
@@ -106,10 +142,27 @@ export const HeaderTitle = styled(motion.div)`
 
       font-size: 0.9rem;
     }
+
+    @media only screen and (max-width: 390px) {
+      height: 9rem;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .btnContainer > .first {
-    margin-right: 1rem;
+    @media only screen and (min-width: 890px) {
+      margin-right: 1rem;
+    }
+  }
+
+  .btnContainer > div {
+    @media only screen and (max-width: 390px) {
+      height: 100%;
+      margin: 0.5rem;
+    }
   }
 `;
 
@@ -182,6 +235,11 @@ export const PlainButton = styled(motion.div)`
   @media screen and (max-width: 1440px) {
     width: 12rem;
   }
+
+  @media only screen and (max-width: 390px) {
+    width: 100%;
+  }
+
   color: ${(props) => (props.textcolor ? props.textcolor : "white")};
   border-radius: 10px;
   display: flex;
@@ -207,6 +265,10 @@ export const BorderButton = styled(motion.div)`
   }
   @media screen and (max-width: 1440px) {
     width: 12rem;
+  }
+
+  @media only screen and (max-width: 390px) {
+    width: 100%;
   }
   font-family: "Lato", sans-serif;
   height: calc(100% - 7px);
@@ -242,9 +304,14 @@ export const BorderButton = styled(motion.div)`
 `;
 
 export const Aboutmesection = styled.div`
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
+
   width: 100%;
+
+  @media screen and (max-width: 890px) {
+    height: auto;
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -273,16 +340,35 @@ export const FlexContainer = styled.div`
   @media screen and (max-width: 1440px) {
     font-size: 16px;
   }
+
+  @media screen and (max-width: 890px) {
+    flex-direction: column;
+
+    margin-top: 5rem;
+  }
   align-items: center;
 `;
 
 export const FlexLeft = styled(motion.div)`
   height: 70%;
 
+  @media screen and (max-width: 890px) {
+    height: 50%;
+  }
+
+  @media screen and (max-width: 390px) {
+    height: 50%;
+  }
   img {
     height: 100%;
-
     object-fit: cover;
+    @media screen and (max-width: 890px) {
+      height: 40rem;
+    }
+
+    @media screen and (max-width: 390px) {
+      height: 27rem;
+    }
   }
 `;
 
@@ -291,6 +377,24 @@ export const FlexRight = styled(motion.div)`
 
   width: 32%;
 
+  @media screen and (max-width: 890px) {
+    margin-top: 2rem;
+    width: 55%;
+
+    h1 {
+      margin: 1.5rem 0;
+    }
+
+    p:nth-child(2) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    margin-top: 2rem;
+    font-size: 1rem;
+    width: 75%;
+  }
   display: flex;
 
   flex-direction: column;
@@ -326,12 +430,29 @@ export const FlexRight = styled(motion.div)`
 
       font-size: 15px;
     }
+
+    @media screen and (max-width: 890px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 10rem;
+      div {
+        width: 100%;
+
+        margin: 0.5rem 0;
+      }
+    }
   }
 `;
 
 export const MyWorkSection = styled(motion.div)`
   height: 100vh;
 
+  @media screen and (max-width: 390px) {
+    height: auto;
+
+    margin: 10rem 0;
+  }
   h1 {
     margin-bottom: 0rem;
     font-size: 60px;
@@ -355,6 +476,10 @@ export const Slider = styled.div`
   height: 80%;
 
   width: 90%;
+
+  @media screen and (max-width: 390px) {
+    width: 90%;
+  }
 `;
 export const SliderControls = styled.div`
   height: 100%;
@@ -371,6 +496,19 @@ export const ArrowContainer = styled.div`
   transition: all 1s;
   padding: 1rem;
 
+  @media screen and (max-width: 390px) {
+    z-index: 2;
+    padding: 0.5rem;
+    position: absolute;
+
+    :first-child {
+      left: 0%;
+    }
+    :last-child {
+      right: 0%;
+    }
+  }
+
   display: flex;
   justify-content: center;
 
@@ -381,6 +519,11 @@ export const ArrowContainer = styled.div`
   .arrow {
     height: 2rem;
     width: 2rem;
+
+    @media screen and (max-width: 390px) {
+      height: 1rem;
+      width: 1rem;
+    }
   }
 `;
 export const Sliderimages = styled.div`
@@ -390,6 +533,13 @@ export const Sliderimages = styled.div`
   justify-content: flex-start;
 
   width: 90%;
+
+  @media screen and (max-width: 390px) {
+    height: 35%;
+    width: 100%;
+
+    margin: 3rem 0;
+  }
 
   box-shadow: 0 6px 12px rgba(105, 112, 168, 0.2);
   img {
@@ -425,6 +575,14 @@ export const Sliderdots = styled.div`
     width: 1rem;
 
     border-radius: 50%;
+
+    @media screen and (max-width: 390px) {
+      height: 0.5rem;
+
+      margin: 0 0.5rem;
+
+      width: 0.5rem;
+    }
   }
 
   .dot${(props) => props.position} {
@@ -474,7 +632,7 @@ export const QnASection = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  margin: 5rem 0 0rem 0;
   padding: 5rem 0;
 
   background-color: #49539f;
@@ -491,6 +649,10 @@ export const StyledQuestion = styled(motion.div)`
   .listelem {
     margin-top: 1.2rem;
     margin-left: 4rem;
+
+    @media screen and (max-width: 390px) {
+      margin-left: 1rem;
+    }
   }
 
   hr {
@@ -527,8 +689,17 @@ export const StyledQuestion = styled(motion.div)`
     line-height: 35px;
     width: 50%;
 
+    @media screen and (max-width: 390px) {
+      width: 75%;
+      line-height: 20px;
+      width: 100%;
+    }
+
     .listelem:nth-child(2) {
       margin-top: 4rem;
+      @media screen and (max-width: 390px) {
+        margin-top: 1.5rem;
+      }
     }
   }
 
@@ -539,7 +710,7 @@ export const StyledQuestion = styled(motion.div)`
 `;
 
 export const StyledForm = styled(motion.div)`
-  height: 75vh;
+  height: 90vh;
   p {
     display: flex;
     align-self: start;
@@ -610,6 +781,10 @@ export const StyledForm = styled(motion.div)`
 
       height: 4rem;
     }
+
+    @media screen and (max-width: 390px) {
+      height: 3rem;
+    }
     width: 100%;
     display: flex;
 
@@ -624,6 +799,11 @@ export const StyledForm = styled(motion.div)`
 
       border: #6970a8 solid 3px;
 
+      @media screen and (max-width: 390px) {
+        border: #6970a8 solid 2px;
+        border-radius: 10px 0 0 10px;
+        border-right: none;
+      }
       border-right: none;
       padding-left: 1rem;
 

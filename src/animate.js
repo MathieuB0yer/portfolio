@@ -74,7 +74,16 @@ export const faq = {
 };
 
 export const comeFromRight = {
-  hidden: { x: 300, opacity: 0 },
+  hidden: {
+    x: 300,
+    opacity: 0,
+    transition: {
+      duration: 1,
+
+      when: "beforeChildren",
+      staggerChildren: 1,
+    },
+  },
 
   show: {
     x: 0,
@@ -86,7 +95,16 @@ export const comeFromRight = {
 };
 
 export const comeFromLeft = {
-  hidden: { x: -300, opacity: 0 },
+  hidden: {
+    x: -300,
+    opacity: 0,
+    transition: {
+      duration: 1,
+
+      when: "beforeChildren",
+      staggerChildren: 1,
+    },
+  },
 
   show: {
     x: 0,
