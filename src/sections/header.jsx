@@ -6,6 +6,7 @@ import {
   HeaderTitle,
   HeaderTitleContainer,
   PlainButton,
+  ScrollIcn,
 } from "../styles";
 
 import { motion } from "framer-motion";
@@ -18,6 +19,7 @@ import {
   textAppear,
 } from "../animate";
 
+import scrollTeller from "../img/scrollTeller.svg";
 const heroIMG = require("../img/heroIMG.png");
 const Header = ({ executeScrollOnWork, executeScrollOnContact }) => {
   return (
@@ -51,6 +53,11 @@ const Header = ({ executeScrollOnWork, executeScrollOnContact }) => {
           </motion.div>
         </HeaderTitle>
       </HeaderTitleContainer>
+
+      <ScrollIcn>
+        <img src={scrollTeller} alt="" />
+        <motion.div className="miniDot"></motion.div>
+      </ScrollIcn>
     </FullScreenSection>
   );
 };

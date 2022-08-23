@@ -113,6 +113,64 @@ export const HeaderTitle = styled(motion.div)`
   }
 `;
 
+export const ScrollIcn = styled.div`
+  height: 3rem;
+
+  position: absolute;
+
+  bottom: 2rem;
+  z-index: 1;
+  display: flex;
+
+  /* justify-items: flex-end; */
+  align-self: center;
+  img {
+    height: 100%;
+  }
+
+  .miniDot {
+    height: 1rem;
+    width: 1rem;
+
+    background-color: white;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 25%;
+
+    top: 12.5%;
+
+    animation: minidotanim 3s infinite ease-in-out;
+  }
+
+  @keyframes minidotanim {
+    0% {
+      top: 12.5%;
+      opacity: 0;
+    }
+
+    15% {
+      top: 50%;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+
+    50% {
+      top: 12.5%;
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: 12.5%;
+    }
+  }
+`;
+
 export const PlainButton = styled(motion.div)`
   font-family: "Lato", sans-serif;
   height: 100%;
