@@ -119,7 +119,7 @@ export const PlainButton = styled(motion.div)`
   width: 15rem;
 
   @media screen and (min-width: 1900px) {
-    width: 20rem;
+    width: 16rem;
   }
   @media screen and (max-width: 1440px) {
     width: 12rem;
@@ -145,7 +145,7 @@ export const PlainButton = styled(motion.div)`
 
 export const BorderButton = styled(motion.div)`
   @media screen and (min-width: 1900px) {
-    width: 20rem;
+    width: 16rem;
   }
   @media screen and (max-width: 1440px) {
     width: 12rem;
