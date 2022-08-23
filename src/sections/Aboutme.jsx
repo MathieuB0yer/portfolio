@@ -42,8 +42,8 @@ const Aboutme = ({ myRef, executeScrollOnWork, executeScrollOnContact }) => {
             <span className="first">
               Well hello there ! I’m Mathieu a French web developper and
               designer and my goal here is to help you to understand your
-              brand’s target and then create create your web identity , giving
-              you visibility across the web ocean !
+              brand’s target and then create your web identity , giving you
+              visibility across the web ocean !
             </span>
             <span>
               So ! Are you interested to get started with me into a brand new

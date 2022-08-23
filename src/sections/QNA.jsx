@@ -50,7 +50,9 @@ const QNA = () => {
                 {/* <p>{Q.response}</p> */}
                 <p>
                   {Q.response.split("_").map((resp) => (
-                    <span>{resp}</span>
+                    <span className={resp.includes("-") ? "listelem" : ""}>
+                      {resp}
+                    </span>
                   ))}
                 </p>
               </motion.div>

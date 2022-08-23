@@ -430,6 +430,11 @@ export const QuestionsContainer = styled(motion.div)`
 `;
 
 export const StyledQuestion = styled(motion.div)`
+  .listelem {
+    margin-top: 1.2rem;
+    margin-left: 4rem;
+  }
+
   hr {
     border: 2px solid white;
     @media screen and (max-width: 1440px) {
@@ -461,8 +466,12 @@ export const StyledQuestion = styled(motion.div)`
   p {
     padding: 2rem 0;
 
-    line-height: 50px;
+    line-height: 35px;
     width: 50%;
+
+    .listelem:nth-child(2) {
+      margin-top: 4rem;
+    }
   }
 
   span {
