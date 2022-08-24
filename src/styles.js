@@ -11,7 +11,7 @@ export const FullScreenSection = styled(motion.div)`
   transform: translate(0%);
   height: 100vh;
 
-  @media only screen and (max-width: 890px) {
+  @media only screen and (max-width: 1200px) {
     @supports (-webkit-touch-callout: none) {
       height: -webkit-fill-available;
     }
@@ -55,7 +55,7 @@ export const FullscreenIMG = styled(motion.div)`
     height: 100%;
     width: 100%;
 
-    @media only screen and (max-width: 890px) {
+    @media only screen and (max-width: 1200px) {
       height: -webkit-fill-available;
     }
   }
@@ -70,7 +70,7 @@ export const HeaderTitleContainer = styled.div`
   align-items: center;
   justify-content: right;
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 1200px) {
     justify-content: center;
 
     text-align: center;
@@ -83,7 +83,7 @@ export const HeaderTitle = styled(motion.div)`
 
   margin-right: 10%;
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 1200px) {
     justify-content: center;
 
     margin-right: 0;
@@ -111,7 +111,7 @@ export const HeaderTitle = styled(motion.div)`
     }
   }
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 1200px) {
     h1 {
       line-height: 70px;
 
@@ -150,7 +150,7 @@ export const HeaderTitle = styled(motion.div)`
       font-size: 0.9rem;
     }
 
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: 1200px) {
       height: 9rem;
       width: 100%;
       flex-direction: column;
@@ -160,13 +160,13 @@ export const HeaderTitle = styled(motion.div)`
   }
 
   .btnContainer > .first {
-    @media only screen and (min-width: 890px) {
+    @media only screen and (min-width: 1200px) {
       margin-right: 1rem;
     }
   }
 
   .btnContainer > div {
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: 1200px) {
       height: 100%;
       margin: 0.5rem;
     }
@@ -243,7 +243,7 @@ export const PlainButton = styled(motion.div)`
     width: 12rem;
   }
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
   }
 
@@ -274,7 +274,7 @@ export const BorderButton = styled(motion.div)`
     width: 12rem;
   }
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
   }
   font-family: "Lato", sans-serif;
@@ -316,7 +316,7 @@ export const Aboutmesection = styled.div`
 
   width: 100%;
 
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 1200px) {
     height: auto;
   }
 `;
@@ -346,35 +346,53 @@ export const FlexContainer = styled.div`
 
   @media screen and (max-width: 1440px) {
     font-size: 16px;
+    margin-top: 5rem;
   }
 
   @media screen and (max-width: 890px) {
     flex-direction: column;
+  }
 
-    margin-top: 5rem;
+  @media screen and (max-width: 350px) {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   align-items: center;
 `;
 
 export const FlexLeft = styled(motion.div)`
   height: 70%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 890px) {
     height: 50%;
   }
 
-  @media screen and (max-width: 390px) {
-    height: 50%;
-  }
   img {
     height: 100%;
     object-fit: cover;
+
+    @media screen and (max-width: 1200px) {
+      height: 30rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 90%;
+    }
     @media screen and (max-width: 890px) {
       height: 40rem;
     }
 
     @media screen and (max-width: 390px) {
       height: 27rem;
+    }
+
+    @media screen and (max-width: 350px) {
+      width: 90%;
     }
   }
 `;
@@ -384,6 +402,9 @@ export const FlexRight = styled(motion.div)`
 
   width: 32%;
 
+  @media screen and (max-width: 1200px) {
+    width: 50%;
+  }
   @media screen and (max-width: 890px) {
     margin-top: 2rem;
     width: 55%;
@@ -402,11 +423,20 @@ export const FlexRight = styled(motion.div)`
     font-size: 1rem;
     width: 75%;
   }
+
+  @media screen and (max-width: 350px) {
+    width: 90%;
+
+    font-size: 0.9rem;
+    h1 {
+      font-size: 30px;
+    }
+  }
   display: flex;
 
-  flex-direction: column;
-
   justify-content: space-around;
+
+  flex-direction: column;
 
   span {
     display: block;
@@ -438,7 +468,7 @@ export const FlexRight = styled(motion.div)`
       font-size: 15px;
     }
 
-    @media screen and (max-width: 890px) {
+    @media screen and (max-width: 1200px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -449,13 +479,17 @@ export const FlexRight = styled(motion.div)`
         margin: 0.5rem 0;
       }
     }
+
+    @media screen and (max-width: 350px) {
+      height: 8rem;
+    }
   }
 `;
 
 export const MyWorkSection = styled(motion.div)`
   height: 100vh;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 1200px) {
     height: auto;
 
     margin: 10rem 0;
@@ -484,7 +518,7 @@ export const Slider = styled.div`
 
   width: 90%;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 1200px) {
     width: 90%;
   }
 `;
@@ -503,7 +537,7 @@ export const ArrowContainer = styled.div`
   transition: all 1s;
   padding: 1rem;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 1200px) {
     z-index: 2;
     padding: 0.5rem;
     position: absolute;
@@ -527,7 +561,7 @@ export const ArrowContainer = styled.div`
     height: 2rem;
     width: 2rem;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 1200px) {
       height: 1rem;
       width: 1rem;
     }
@@ -541,7 +575,7 @@ export const Sliderimages = styled.div`
 
   width: 90%;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 1200px) {
     height: 35%;
     width: 100%;
 
@@ -583,7 +617,7 @@ export const Sliderdots = styled.div`
 
     border-radius: 50%;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 1200px) {
       height: 0.5rem;
 
       margin: 0 0.5rem;
@@ -657,7 +691,7 @@ export const StyledQuestion = styled(motion.div)`
     margin-top: 1.2rem;
     margin-left: 4rem;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 1200px) {
       margin-left: 1rem;
     }
   }
@@ -696,7 +730,7 @@ export const StyledQuestion = styled(motion.div)`
     line-height: 35px;
     width: 50%;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 1200px) {
       width: 75%;
       line-height: 20px;
       width: 100%;
@@ -704,7 +738,7 @@ export const StyledQuestion = styled(motion.div)`
 
     .listelem:nth-child(2) {
       margin-top: 4rem;
-      @media screen and (max-width: 390px) {
+      @media screen and (max-width: 1200px) {
         margin-top: 1.5rem;
       }
     }
@@ -789,7 +823,7 @@ export const StyledForm = styled(motion.div)`
       height: 4rem;
     }
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 1200px) {
       height: 3rem;
     }
     width: 100%;
@@ -806,7 +840,7 @@ export const StyledForm = styled(motion.div)`
 
       border: #6970a8 solid 3px;
 
-      @media screen and (max-width: 390px) {
+      @media screen and (max-width: 1200px) {
         border: #6970a8 solid 2px;
         border-radius: 10px 0 0 10px;
         border-right: none;
