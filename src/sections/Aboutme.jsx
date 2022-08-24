@@ -26,14 +26,8 @@ const Aboutme = ({ executeScrollOnWork, executeScrollOnContact }) => {
   }, [inView, controls]);
   return (
     <Aboutmesection>
-      <FlexContainer>
-        <FlexLeft
-          ref={[ref]}
-          // variants={
-          //   comeFromLeft}
-
-          animate={controls}
-        >
+      <FlexContainer ref={ref}>
+        <FlexLeft variants={comeFromLeft} animate={controls}>
           <img src={aboutMe} alt="" />
         </FlexLeft>
 
