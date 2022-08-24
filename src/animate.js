@@ -77,6 +77,7 @@ export const comeFromRight = {
   hidden: {
     x: 300,
     opacity: 0,
+
     transition: {
       duration: 1,
 

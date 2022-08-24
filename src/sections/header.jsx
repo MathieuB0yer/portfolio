@@ -21,11 +21,24 @@ import {
 
 import scrollTeller from "../img/scrollTeller.svg";
 const heroIMG = require("../img/heroIMG.png");
-const Header = ({ executeScrollOnWork, executeScrollOnContact }) => {
+const Header = ({
+  executeScrollOnWork,
+  executeScrollOnContact,
+  getDeviceType,
+}) => {
+  // let isMobile = useState(initialState);
+  // const isMobile = useMediaQuery({ query: "(max-width: 720px)" });
+
+  console.log(getDeviceType());
   return (
     <FullScreenSection>
-      <FullscreenIMG variants={makebig} initial="hidden" animate="show">
+      <FullscreenIMG
+        variants={getDeviceType() == "android" ? "" : makebig}
+        initial={getDeviceType() == "android" ? "show" : "hidden"}
+        animate={getDeviceType() == "android" ? "" : "show"}
+      >
         <img src={heroIMG} alt="" className="" />
+
         <div className="gradient"></div>
       </FullscreenIMG>
 

@@ -12,9 +12,21 @@ function App() {
 
   const executeScrollOnWork = () => workRef.current.scrollIntoView();
   const executeScrollOnContact = () => contactRef.current.scrollIntoView();
+
+  const getDeviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+      return "tablet";
+    }
+    if (/Android/.test(ua)) {
+      return "android";
+    }
+    return "desktop";
+  };
   return (
     <div className="App">
       <Header
+        getDeviceType={getDeviceType}
         workRef={workRef}
         contactRef={contactRef}
         executeScrollOnWork={executeScrollOnWork}

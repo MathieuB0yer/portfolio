@@ -8,12 +8,19 @@ export const FullScreenSection = styled(motion.div)`
     font-family: "Lato", sans-serif;
   }
 
+  transform: translate(0%);
   height: 100vh;
 
-  @media only screen and (max-width: 390px) {
-    height: -webkit-fill-available;
-  }
+  @media only screen and (max-width: 890px) {
+    @supports (-webkit-touch-callout: none) {
+      height: -webkit-fill-available;
+    }
 
+    @supports not (-webkit-touch-callout: none) {
+      height: 100vh;
+      transform: translate(0%);
+    }
+  }
   display: flex;
   justify-content: center;
   align-items: center;
